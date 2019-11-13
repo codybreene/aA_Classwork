@@ -180,7 +180,11 @@ def colleagues_of_garfunkel
     a.name
   FROM
     actors a JOIN castings c ON a.id = c.actor_id
-  WHERE c.movie_id = (SELECT c.movie_id FROM castings c 
-                      JOIN actors a ON c.actor_id = a.)
+  WHERE c.movie_id IN 
+  (SELECT movie_id 
+  FROM castings JOIN actors ON castings.actor_id = actors.id
+  WHERE actors.name = 'Art Garfunkel' )
+  AND a.name != 'Art Garfunkel'
+
   SQL
 end
