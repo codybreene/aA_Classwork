@@ -1,0 +1,26 @@
+body, head {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font:inherit;
+}
+
+head {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  line-height: 1.5;
+}
+
+li {
+  list-style-type: none ;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+}
+
+
