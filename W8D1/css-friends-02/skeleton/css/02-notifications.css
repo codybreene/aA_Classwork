@@ -1,0 +1,6 @@
+/* PHASE 2: Notifications */
+
+.badge {
+    display: inline-block;
+    border-radius: 200%;
+}

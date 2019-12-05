@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MajorTuneage</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error|%>
+        <li><%= error %> </li>
+        <% end %>
+    <% end %>
+    <% debugger %>
+    <% if !!@current_user %>
+    <%= @current_user.email %>
+    <% end %>
+    <%= yield %>
+    application html is working!
+  </body>
+
+</html>
